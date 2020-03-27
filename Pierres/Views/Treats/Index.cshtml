@@ -3,26 +3,22 @@
 }
 
 @using Pierres.Models;
+@model List<Pierres.Models.Treat>;
 
 <h2>Treats</h2>
+
 @if (Model.Count == 0)
 {
     <h3>No Treats have been added yet!</h3>
 }
 
-@* @using (Html.BeginForm())
-{
-    <p>
-        Find by name: @Html.TextBox("SearchString")  
-        <input type="submit" value="Search" />
-    </p>
-} *@
-
 @foreach (Treat treat in Model)
 {
-    <li id="treatsIndexLi">@Html.ActionLink($"{ treat.TreatName }", "Details", new { id = treat.TreatId })</li>
+    <li>
+        @Html.ActionLink($"{ treat.TreatName }", "Details", new { id = treat.TreatId })
+    </li>
 }
 
 <p>@Html.ActionLink("Add new Treat", "Create")</p>
-<p>@Html.ActionLink("See all Authors", "Index", "Authors")</p>
+<p>@Html.ActionLink("See all Flavors", "Index", "Flavors")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

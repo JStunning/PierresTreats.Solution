@@ -7,7 +7,6 @@ C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Pierres.TagHelpers.input.cache
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Pierres.TagHelpers.output.cache
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Pierres.RazorCoreGenerate.cache
-C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Flavors\AddBook.g.cshtml.cs
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Flavors\Create.g.cshtml.cs
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Flavors\Delete.g.cshtml.cs
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Flavors\Details.g.cshtml.cs
@@ -32,3 +31,6 @@ C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\bin
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\bin\Debug\netcoreapp2.2\Pierres.Views.pdb
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Pierres.Views.pdb
 C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Pierres.csproj.CopyComplete
+C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Flavors\AddTreat.g.cshtml.cs
+C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Treats\Edit.g.cshtml.cs
+C:\Users\Stunning\Desktop\epicodusProjects\c#\PierresTreats.Solution\Pierres\obj\Debug\netcoreapp2.2\Razor\Views\Treats\AddFlavor.g.cshtml.cs

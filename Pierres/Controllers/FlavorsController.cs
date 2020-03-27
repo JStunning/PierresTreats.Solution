@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,7 @@ namespace Pierres.Controllers
 
     public ActionResult Create()
     {
-        ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
+        ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
         return View();
     }
 
@@ -67,7 +68,7 @@ namespace Pierres.Controllers
     public ActionResult Edit(int id)
     {
         var thisFlavor = _db.Flavors.FirstOrDefault(flavors => flavors.FlavorId == id);
-        ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "Name");
+        ViewBag.TreatId = new SelectList(_db.Treats, "TreatId", "TreatName");
         return View(thisFlavor);
     }
 

@@ -13,6 +13,7 @@ namespace Pierres.Models
 
         public int TreatId { get; set; }
         public string TreatName { get; set; }     
+        public int FlavorId { get; set; }
         public virtual ICollection<TreatFlavor> Flavors { get; set; }
     }
 }

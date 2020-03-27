@@ -10,6 +10,7 @@ namespace Pierres.Models
         {
             this.Treats = new HashSet<TreatFlavor>();
         }
+        
         public int FlavorId {get; set;}
         public string FlavorName {get; set;}
         public int TreatId { get; set; }
