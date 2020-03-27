@@ -14,14 +14,11 @@ _App to track inventory of treats and the treats respective flavors for a shop o
 * _Download .NET script in the Terminal with this command { dotnet tool install -g dotnet-script }_
 * _Download MySQL from here: https://dev.mysql.com/downloads/_
   * _In MySQL_
-    * CREATE DATABASE library;
-    * USE library;
-    * CREATE TABLE books (BookId serial PRIMARY KEY, Name LONGTEXT, PatronId INT);
-    * CREATE TABLE bookauthors (BookAuthorId serial PRIMARY KEY, AuthorId Int, BookId INT);
-    * CREATE TABLE authors (AuthorId serial PRIMARY KEY, AuthorName LONGTEXT, BookId INT);
-    * CREATE TABLE patrons (PatronId serial PRIMARY KEY, PatronName LONGTEXT);
-    * CREATE TABLE checkout (PatronCopyId serial PRIMARY KEY, CopyId Int, PatronId INT);
-    * CREATE TABLE copys (CopyId serial PRIMARY KEY, CopyNumber LONGTEXT, CopyDueDate LONGTEXT);
+    * CREATE DATABASE pierres;
+    * USE pierres;
+    * CREATE TABLE treats (TreatId serial PRIMARY KEY, TreatName LONGTEXT, FlavorId INT);
+    * CREATE TABLE treatflavors (TreatFlavorId serial PRIMARY KEY, FlavorId Int, TreatId INT);
+    * CREATE TABLE flavors (FlavorId serial PRIMARY KEY, FlavorName LONGTEXT, TreatId INT);
 * _Git clone Or download the zip file from gihub { https://github.com/JackStunning/PierresTreats.Solution }_
 * _In the Terminal run this command { dotnet build }_
 * _In the Terminal run this command { dotnet run }_
@@ -34,7 +31,7 @@ _App to track inventory of treats and the treats respective flavors for a shop o
 
 ## Known Bugs
 
-_Copy and Patrons detail pages don't have the correct titles for books_
+_No known bugs_
 
 ## Support and contact details
  
