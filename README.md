@@ -29,6 +29,22 @@ _App to track inventory of treats and the treats respective flavors for a shop o
       * _Input:_ user opens web app
       * _Output:_ homepage should open "Welcome to Pierre's!" and also gives you links "See Peirre's Treats", "See Peirre's Flavors"
 
+  * _Spec:_ If user clicks "See Peirre's Treats" link.
+      * _Input:_ user clicks "See Peirre's Treats" link.
+      * _Output:_ should redirect user to Treats Index Page, it should have a Treats header, list of treats and links to "Add new Treat", "See all Flavors" and "Home"
+  
+  * _Spec:_ If user clicks "See Peirre's Flavors" link.
+      * _Input:_ user clicks "See Peirre's Flavors" link.
+      * _Output:_ should redirect user to Flavors Index Page, it should have a Flavors header, list of flavors and links to "Add new Flavor", "See all Treats" and "Home"
+
+  * _Spec:_ If user clicks "Add new Treat/Flavor" link.
+      * _Input:_ user clicks "Add new Treat/Flavor" link.
+      * _Output:_ should redirect user to Treats/Flavors Create Page, it should have a Form with Name input, Flavor selector, add button and link to go back to list of Treats/Flavors
+
+  * _Spec:_ If user clicks "Add new Treat/Flavor" Button.
+      * _Input:_ user clicks "Add new Treat/Flavor" Button.
+      * _Output:_ should redirect user to Treats/Flavors Index Page again but this time it has your Treat/Flavor added to the list of Treats/Flavors
+
 ## Known Bugs
 
 _No known bugs_
