@@ -1,0 +1,36 @@
+body {
+  background-image: url("https://natgeo.imgix.net/factsheets/thumbnails/1,200-year-old-Baroque-style-Convent-of-St%20Gall-Switzerland..jpg?auto=compress,format&w=1024&h=560&fit=crop");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background-color: mistyrose;
+  margin-top: 3%;
+  height: 700px;
+  border: 1px solid black; 
+  padding: 2%;
+}
+
+h1, h2 {
+  text-decoration: underline;
+  color: royalblue;
+  text-shadow: black 1px 1px;
+}
+
+input {
+  margin: 2% 0;
+}
+
+p {
+  margin-bottom: 2%;
+}
+
+.button {
+  border: 1px solid royalblue;
+  background-color: rgb(220, 235, 250);
+}
+
+#booksIndexLi {
+  margin-bottom: 2%;
+}
