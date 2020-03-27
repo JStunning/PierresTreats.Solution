@@ -14,16 +14,18 @@
 }
 else
 {
-  <h4>Flavors the Treat has written:</h4>
+  <h4>Flavors the Treat can be:</h4>
   <ul>
   @foreach(var join in Model.Flavors)
   {
-    <li>@Html.ActionLink($"{ join.Flavor.FlavorName }", "Details", "Flavors", new { id = join.Flavor.FlavorId })</li>
-    @using (Html.BeginForm("DeleteFlavor", "Treats"))
-    {
-      @Html.Hidden("joinId", @join.TreatFlavorId)
-      <input class="button" id="detailsDelete" type="submit" value="Delete"/>
-    }
+    <li class="detailsList">
+      @Html.ActionLink($"{ join.Flavor.FlavorName }", "Details", "Flavors", new { id = join.Flavor.FlavorId })
+      @using (Html.BeginForm("DeleteFlavor", "Treats"))
+      {
+        @Html.Hidden("joinId", @join.TreatFlavorId)
+        <input class="button" id="detailsDelete" type="submit" value="Delete"/>
+      }
+    </li>
   }
   </ul>
   <hr />

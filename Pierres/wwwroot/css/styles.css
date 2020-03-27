@@ -1,14 +1,14 @@
 body {
-  background-image: url("https://natgeo.imgix.net/factsheets/thumbnails/1,200-year-old-Baroque-style-Convent-of-St%20Gall-Switzerland..jpg?auto=compress,format&w=1024&h=560&fit=crop");
+  background-image: url("https://media.architecturaldigest.com/photos/55e7658d302ba71f3016531d/master/w_900,h_600,c_limit/dam-images-architecture-2015-02-candy-shops-beautiful-candy-shops-01-dylans-candy-bar.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .container {
-  background-color: mistyrose;
+  background-color: rgb(233, 207, 210);
   margin-top: 3%;
   height: 700px;
-  border: 1px solid black; 
+  border: 3px solid yellow;
   padding: 2%;
 }
 
@@ -28,9 +28,22 @@ p {
 
 .button {
   border: 1px solid royalblue;
-  background-color: rgb(220, 235, 250);
+  background-color: rgb(233, 207, 210);
+  color: royalblue;
 }
 
 #booksIndexLi {
   margin-bottom: 2%;
+}
+
+.detailsList {
+  margin-top: 8px;
+}
+
+#detailsDelete {
+  margin: 5px 0;
+}
+
+.addLink {
+  margin-top: 2%;
 }
