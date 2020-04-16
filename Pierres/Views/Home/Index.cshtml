@@ -3,5 +3,12 @@
 }
 
 <h1>Welcome to Pierre's!</h1>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Hello @User.Identity.Name!</p>
+}
+
 <p>@Html.ActionLink("See Pierre's Treats", "Index", "Treats")</p>
 <p>@Html.ActionLink("See Pierre's Flavors", "Index", "Flavors")</p>
+<p>@Html.ActionLink("Create an account", "Index", "Account")</p>

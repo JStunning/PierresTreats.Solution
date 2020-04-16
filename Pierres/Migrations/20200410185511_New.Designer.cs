@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pierres.Models;
 
 namespace Pierres.Migrations
 {
     [DbContext(typeof(PierresContext))]
-    partial class PierresContextModelSnapshot : ModelSnapshot
+    [Migration("20200410185511_New")]
+    partial class New
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -197,11 +199,7 @@ namespace Pierres.Migrations
 
                     b.Property<string>("TreatName");
 
-                    b.Property<string>("UserId");
-
                     b.HasKey("TreatId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Treats");
                 });
@@ -267,13 +265,6 @@ namespace Pierres.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Pierres.Models.Treat", b =>
-                {
-                    b.HasOne("Pierres.Models.ApplicationUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Pierres.Models.TreatFlavor", b =>

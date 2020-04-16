@@ -5,33 +5,46 @@ using System.Threading;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.Threading.Tasks;
+using System.Security.Claims;
 using Pierres.Models;
 
 namespace Pierres.Controllers
 {
+  [Authorize]
   public class TreatsController : Controller
   {
     private readonly PierresContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public TreatsController(PierresContext db)
+    public TreatsController(UserManager<ApplicationUser> userManager, PierresContext db)
     {
+        _userManager = userManager;
         _db = db;
     }
 
-    public ActionResult Index(string searchString)
+    public async Task<ActionResult> Index(string searchString)
     {
-      return View(_db.Treats.ToList());
+        var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var currentUser = await _userManager.FindByIdAsync(userId);
+        var userTreats = _db.Treats.Where(entry => entry.User.Id == currentUser.Id);
+        return View(userTreats);
     }
 
     public ActionResult Create()
     {
-      ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "FlavorName");
-      return View();
+        ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "FlavorName");
+        return View();
     }
 
     [HttpPost]
-    public ActionResult Create(Treat treat, int FlavorId)
+    public async Task<ActionResult> Create(Treat treat, int FlavorId)
     {
+        var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var currentUser = await _userManager.FindByIdAsync(userId);
+        treat.User = currentUser;
         _db.Treats.Add(treat);
         if (FlavorId != 0)
         {
